@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material/styles'
-import { red, blue, green, yellow } from '@mui/material/colors'
 
 // Google Material Design 3 Colors
 const GOOGLE_BLUE = '#4285F4'
