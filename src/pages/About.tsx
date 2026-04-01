@@ -7,29 +7,28 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '../components/atoms/Button';
 
-// ✅ Correct MUI Icons
-import EcoIcon from '@mui/icons-material/Eco';           // replaced Ecology
+// MUI Icons - All these exist in @mui/icons-material
+import EcoIcon from '@mui/icons-material/Eco';
 import PeopleIcon from '@mui/icons-material/People';
 import VerifiedIcon from '@mui/icons-material/Verified';
-import YardIcon from '@mui/icons-material/Yard';         // replaced Sprout
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const About = () => {
   const values = [
     {
-      icon: EcoIcon,           // Sustainability
+      icon: EcoIcon,
       title: 'Sustainability',
       description: 'We practice organic farming methods that preserve soil health and protect the environment for future generations.',
       color: 'success' as const,
     },
     {
-      icon: PeopleIcon,        // Community
+      icon: PeopleIcon,
       title: 'Community',
       description: 'Engaging with local communities through educational tours, workshops, and transparent farming practices.',
       color: 'primary' as const,
     },
     {
-      icon: VerifiedIcon,      // Quality
+      icon: VerifiedIcon,
       title: 'Quality',
       description: 'Every crop is grown with care using only natural fertilizers and sustainable pest management techniques.',
       color: 'secondary' as const,
@@ -165,13 +164,7 @@ const About = () => {
                 <Grid size={{ xs: 12, md: 4 }} key={index}>
                   <Card hover sx={{ height: '100%' }}>
                     <CardContent sx={{ textAlign: 'center', p: 4 }}>
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          justifyContent: 'center',
-                          mb: 2,
-                        }}
-                      >
+                      <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
                         <Box
                           sx={{
                             p: 2,
