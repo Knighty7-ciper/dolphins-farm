@@ -4,12 +4,14 @@ import Drawer from '@mui/material/Drawer'
 import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'
 import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import useTheme from '@mui/material/styles/useTheme'
 import HomeIcon from '@mui/icons-material/Home'
 import AgricultureIcon from '@mui/icons-material/Agriculture'
 import TourIcon from '@mui/icons-material/Tour'
+import ContactMailIcon from '@mui/icons-material/ContactMail'
 import CloseIcon from '@mui/icons-material/Close'
 import Logo from '../atoms/Logo'
 import NavItem from '../molecules/NavItem'
@@ -20,6 +22,8 @@ interface SidebarProps {
 
 const navigationItems = [
   { to: '/', icon: HomeIcon, label: 'Home' },
+  { to: '/about', icon: AgricultureIcon, label: 'About' },
+  { to: '/contact', icon: ContactMailIcon, label: 'Contact' },
   { to: '/crops', icon: AgricultureIcon, label: 'Crops' },
   { to: '/tours', icon: TourIcon, label: 'Tours' },
 ]
