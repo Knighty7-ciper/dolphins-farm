@@ -5,14 +5,14 @@ import Grid from '@mui/material/Grid2'
 import Button from '../atoms/Button'
 import Card from '../atoms/Card'
 import CardContent from '@mui/material/CardContent'
-import EcoIcon from '@mui/icons-material/Eco'
+import GrassIcon from '@mui/icons-material/Grass'
 import LocalShippingIcon from '@mui/icons-material/LocalShipping'
 import VerifiedIcon from '@mui/icons-material/Verified'
 
 const Hero = () => {
   const features = [
     {
-      icon: EcoIcon,
+      icon: GrassIcon,
       title: '100% Organic',
       description: 'Certified organic farming practices',
       color: 'success',
