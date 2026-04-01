@@ -7,7 +7,7 @@ interface BadgeProps {
   size?: 'small' | 'medium'
 }
 
-const StyledChip = styled(Chip)(({ theme }) => ({
+const StyledChip = styled(Chip)(() => ({
   borderRadius: 8,
   fontWeight: 500,
   '& .MuiChip-label': {

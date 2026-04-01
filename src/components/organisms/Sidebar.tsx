@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
 import Drawer from '@mui/material/Drawer'
 import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'
@@ -32,8 +31,6 @@ const Sidebar = ({ drawerWidth }: SidebarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false)
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  const navigate = useNavigate()
-  const location = useLocation()
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
