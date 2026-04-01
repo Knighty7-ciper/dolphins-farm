@@ -1,42 +1,40 @@
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid2'
-import Card from '../components/atoms/Card'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Button from '../components/atoms/Button'
-import EcologyIcon from '@mui/icons-material/Ecology'
-import PeopleIcon from '@mui/icons-material/People'
-import VerifiedIcon from '@mui/icons-material/Verified'
-import SproutIcon from '@mui/icons-material/Sprout'
-import PeopleIcon from '@mui/icons-material/People'
-import VerifiedIcon from '@mui/icons-material/Verified'
-import LocationOnIcon from '@mui/icons-material/LocationOn'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid2';
+import Card from '../components/atoms/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '../components/atoms/Button';
+
+// ✅ Correct MUI Icons
+import EcoIcon from '@mui/icons-material/Eco';           // replaced Ecology
+import PeopleIcon from '@mui/icons-material/People';
+import VerifiedIcon from '@mui/icons-material/Verified';
+import YardIcon from '@mui/icons-material/Yard';         // replaced Sprout
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const About = () => {
   const values = [
     {
-      icon: EcologyIcon,
-      icon: SproutIcon,
+      icon: EcoIcon,           // Sustainability
       title: 'Sustainability',
       description: 'We practice organic farming methods that preserve soil health and protect the environment for future generations.',
       color: 'success' as const,
     },
     {
-      icon: PeopleIcon,
+      icon: PeopleIcon,        // Community
       title: 'Community',
       description: 'Engaging with local communities through educational tours, workshops, and transparent farming practices.',
       color: 'primary' as const,
     },
     {
-      icon: VerifiedIcon,
+      icon: VerifiedIcon,      // Quality
       title: 'Quality',
       description: 'Every crop is grown with care using only natural fertilizers and sustainable pest management techniques.',
       color: 'secondary' as const,
     },
-  ]
+  ];
 
   const team = [
     {
@@ -63,7 +61,7 @@ const About = () => {
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&h=400',
       bio: 'Leading our environmental initiatives',
     },
-  ]
+  ];
 
   const milestones = [
     { year: '2010', event: 'Farm established with initial 20 acres' },
@@ -72,7 +70,7 @@ const About = () => {
     { year: '2021', event: 'Launched educational programs for schools' },
     { year: '2023', event: 'Installed renewable energy systems' },
     { year: '2024', event: 'Achieved carbon-neutral operations' },
-  ]
+  ];
 
   return (
     <Box>
@@ -113,20 +111,20 @@ const About = () => {
           <Grid container spacing={4}>
             <Grid size={{ xs: 12, md: 6 }}>
               <Typography variant="body1" sx={{ color: 'text.secondary', mb: 2, lineHeight: 1.8 }}>
-                Founded in 2010, Dolphins Farm started as a small family operation with a vision to prove that sustainable 
-                agriculture could be both profitable and environmentally responsible. What began with just 20 acres and a 
-                passionate commitment to organic farming has grown into a thriving 150-acre operation serving thousands of 
+                Founded in 2010, Dolphins Farm started as a small family operation with a vision to prove that sustainable
+                agriculture could be both profitable and environmentally responsible. What began with just 20 acres and a
+                passionate commitment to organic farming has grown into a thriving 150-acre operation serving thousands of
                 families across the region.
               </Typography>
               <Typography variant="body1" sx={{ color: 'text.secondary', mb: 2, lineHeight: 1.8 }}>
-                Our journey has been guided by three core principles: respecting the land, supporting our community, and 
-                producing the highest quality crops possible. We&apos;ve invested heavily in research and development, 
-                experimenting with new crop varieties and sustainable farming techniques to maximize yields while minimizing 
+                Our journey has been guided by three core principles: respecting the land, supporting our community, and
+                producing the highest quality crops possible. We&apos;ve invested heavily in research and development,
+                experimenting with new crop varieties and sustainable farming techniques to maximize yields while minimizing
                 environmental impact.
               </Typography>
               <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>
-                Today, we&apos;re proud to be a certified organic operation with carbon-neutral farming practices. But our 
-                work isn&apos;t limited to the fields—we&apos;re deeply committed to education, welcoming over 5,000 visitors 
+                Today, we&apos;re proud to be a certified organic operation with carbon-neutral farming practices. But our
+                work isn&apos;t limited to the fields—we&apos;re deeply committed to education, welcoming over 5,000 visitors
                 annually for farm tours and workshops.
               </Typography>
             </Grid>
@@ -162,7 +160,7 @@ const About = () => {
 
           <Grid container spacing={3}>
             {values.map((value, index) => {
-              const IconComponent = value.icon
+              const IconComponent = value.icon;
               return (
                 <Grid size={{ xs: 12, md: 4 }} key={index}>
                   <Card hover sx={{ height: '100%' }}>
@@ -196,7 +194,7 @@ const About = () => {
                     </CardContent>
                   </Card>
                 </Grid>
-              )
+              );
             })}
           </Grid>
         </Container>
@@ -212,7 +210,6 @@ const About = () => {
             Key milestones in the evolution of Dolphins Farm.
           </Typography>
         </Box>
-
         <Box>
           {milestones.map((milestone, index) => (
             <Box
@@ -258,7 +255,6 @@ const About = () => {
               Passionate professionals dedicated to sustainable farming and community engagement.
             </Typography>
           </Box>
-
           <Grid container spacing={3}>
             {team.map((member, index) => (
               <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
@@ -274,7 +270,10 @@ const About = () => {
                     <Typography variant="h6" sx={{ fontWeight: 600, mb: 0.5 }}>
                       {member.name}
                     </Typography>
-                    <Typography variant="caption" sx={{ color: 'primary.main', fontWeight: 600, display: 'block', mb: 1 }}>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: 'primary.main', fontWeight: 600, display: 'block', mb: 1 }}
+                    >
                       {member.role}
                     </Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
@@ -312,7 +311,6 @@ const About = () => {
               background: 'rgba(255,255,255,0.1)',
             }}
           />
-
           <Typography variant="h4" sx={{ fontWeight: 700, mb: 2, position: 'relative' }}>
             Join Our Community
           </Typography>
@@ -349,7 +347,7 @@ const About = () => {
         </Box>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default About
+export default About;
