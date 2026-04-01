@@ -9,12 +9,17 @@ import Button from '../components/atoms/Button'
 import EcologyIcon from '@mui/icons-material/Ecology'
 import PeopleIcon from '@mui/icons-material/People'
 import VerifiedIcon from '@mui/icons-material/Verified'
+import SproutIcon from '@mui/icons-material/Sprout'
+import PeopleIcon from '@mui/icons-material/People'
+import VerifiedIcon from '@mui/icons-material/Verified'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
 const About = () => {
   const values = [
     {
       icon: EcologyIcon,
+      icon: SproutIcon,
       title: 'Sustainability',
       description: 'We practice organic farming methods that preserve soil health and protect the environment for future generations.',
       color: 'success' as const,
